@@ -1,0 +1,50 @@
+.img--fluid {
+    width: 100%;
+}
+
+.list--none {
+    list-style: none !important;
+}
+
+.the_content_section ul li a span {
+    color: #ffad1d;
+    font-weight: bold;
+}
+
+.catalog--list span {
+    margin-right: 1em;
+    width: 120px;
+    display: inline-block;
+}
+
+.catalog--list li a {
+    color: #2574d5;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.max-width-70 {
+    max-width: 70% !important;
+}
+
+.vender_logo img {
+    width: 100px;
+}
+
+input[name="surname"] {
+    display: block;
+    width: 2px;
+    height: 3px;
+    margin-bottom: -3px;
+    opacity: 0.01;
+}
+
+.inner_section > .img > img {
+    width: 137px;
+    margin: 10px 0;
+}
+
+
+
+
+
