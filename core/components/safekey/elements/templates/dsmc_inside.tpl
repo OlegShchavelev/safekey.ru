@@ -26,6 +26,8 @@
 
                 {include 'page.header'}
 
+
+
                 {include 'service_top_block'}
 
                 <div class="the_content_section_left">
@@ -36,9 +38,11 @@
 
                     {include 'section_top_hobnail'}
 
+                    {include 'content_portfolio_mark2'}
+
                     {$_modx->resource.content}
 
-                    {include 'content_portfolio'}
+
 
 
 
