@@ -79,11 +79,19 @@
                             {foreach $rows as $group}
                                 <div class="logos_slider_item">
                                     {foreach $group as $row}
+                                        {if $row.link ?}
+                                        <a class="logos_slider_item_cell" href="{$row.link | url}">
+                                            <div class="logos_slider_item_content">
+                                                <img src="{$row.image | phpthumbon : "w=100&q=40f=jpg"}" alt="{$row.title}" class="lazy"/>
+                                            </div>
+                                        </a>
+                                        {else}
                                         <div class="logos_slider_item_cell">
                                             <div class="logos_slider_item_content">
-                                                <img src="{$row.image | phpthumbon : "w=100&q=40f=jpg"}" alt="{$row.title}" />
+                                                <img src="{$row.image | phpthumbon : "w=100&q=40f=jpg"}" alt="{$row.title}" class="lazy"/>
                                             </div>
                                         </div>
+                                        {/if}
                                     {/foreach}
                                 </div>
                             {/foreach}
@@ -288,7 +296,7 @@
 
                         {foreach $rows as $row}
                             <div class="top_banner_item">
-                                <img src="{$row.image | phpthumbon : "w=570&q=70"}" alt="" />
+                                <img src="{$row.image | phpthumbon : "w=570&q=70"}" class="lazy" alt="" />
 
                                 <div class="caption">
                                     <div class="caption_inner">
@@ -316,7 +324,7 @@
             <div class="inner_section clearfix">
 
                 <div class="photo_estimation_left">
-                    <img src="assets/template/img/ph01.png" alt="" />
+                    <img class="lazy" src="assets/template/img/ph01.png" alt="" />
 
                     <p class="title">
                         Оценим задачу <br/>
