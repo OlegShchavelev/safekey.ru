@@ -65,8 +65,6 @@
         {/if}
 
 
-
-
         {if $_modx->resource.section_work_migx ?}
             <section class="logos_section">
                 <div class="inner_section clearfix">
@@ -76,31 +74,25 @@
 
                         <div class="logos_slider logos_slider2">
                             {set $rows = json_decode($_modx->resource.section_work_migx, true)}
+                            {set $rows = array_chunk($rows, 2)}
 
-                            {foreach $rows as $row}
+                            {foreach $rows as $group}
                                 <div class="logos_slider_item">
-                                    <div class="logos_slider_item_cell">
-                                        <div class="logos_slider_item_content">
-                                            <img src="{$row.image | phpthumbon : "w=100&q=40f=jpg"}" alt="{$row.title}" />
+                                    {foreach $group as $row}
+                                        <div class="logos_slider_item_cell">
+                                            <div class="logos_slider_item_content">
+                                                <img src="{$row.image | phpthumbon : "w=100&q=40f=jpg"}" alt="{$row.title}" />
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="logos_slider_item_cell">
-                                        <div class="logos_slider_item_content">
-                                            <img src="{$row.image | phpthumbon : "w=100&q=40f=jpg"}" alt="{$row.title}" />
-                                        </div>
-                                    </div>
+                                    {/foreach}
                                 </div>
                             {/foreach}
                         </div><!--/logos_slider-->
                     </div>
-
                     <!--<a href="#" rel="nofollow" class="button master_button">Вызвать мастера</a>-->
                 </div>
             </section><!--/logos_section-->
         {/if}
-
-
-
 
 
         {if $_modx->resource.section_advantages ?}
