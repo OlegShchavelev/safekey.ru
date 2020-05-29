@@ -10,7 +10,6 @@
                   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
-
 {include 'section_callback_popup'}
 
 <div class="page_container main_page_container" id="top">
@@ -25,40 +24,22 @@
             <div class="inner_section clearfix">
 
                 {include 'page.header'}
-
                 {include 'service_top_block'}
 
                 <div class="the_content_section_left">
 
-                    {include 'section_top_slider'}
-
-                    {include "introtext"}
-
-                    {include 'section_top_hobnail'}
-
-                    {include 'content_portfolio_mark2'}
+                    <br/>
 
                     {$_modx->resource.content}
 
-
-                    {include 'advantages_block'}
-
-                    {*
-
-                    {include 'how_we_work_block'}
-
-
-
-                    {$_modx->resource.section_bottom_lead}
-
                     <br/>
 
-                    {include 'section_horizontal_form_block'}
+                </div>
 
-                    *}
-                </div><!--/the_content_section_left-->
 
                 <div class="the_content_section_right">
+
+
 
                     <div class="banners">
                         {'!BannerY' | snippet : [
@@ -86,7 +67,5 @@
 
 {include 'scripts'}
 
-
 </body>
-
 </html>
