@@ -9,11 +9,16 @@ $(document).ready(function() {
 	if (isMobile) {$('body').addClass('mobile');}
 	
 	
-	$('.fancy').fancybox({nextSpeed:0,prevSpeed:0});
+	$('.fancy').not('.portfolio_item .fancy').fancybox();
 	
-	$('.fancy_img').fancybox({wrapCSS:"fancy_img"});
-	$('.fancy_card').fancybox({wrapCSS:"fancy_img"});
-	$('.fancy_buy').fancybox({wrapCSS:"fancy_buy"});
+	$('.fancy_img').fancybox({baseClass:"fancy_img"});
+	$('.fancy_card').fancybox({baseClass:"fancy_img"});
+	$('.fancy_buy').fancybox({baseClass:"fancy_buy"});
+	
+	$(document).on('click','.fancy_portfolio', function(e) {
+	    e.preventDefault();
+	    $.fancybox.open({src:$(this).attr('href')});
+	});
 	
 	//$('input[name="tel"]').mask("+7 (999) 999-99-99",{autoclear: false});
 	$('input[name="tel"]').inputmask("+7 (999) 999-99-99",{ "onincomplete": function(){ $(this).removeClass('valid'); }}); 
@@ -234,6 +239,21 @@ $(document).ready(function() {
 			    variableWidth: true,
 			    touchThreshold: 25			    
 			  });
+	}
+
+	if ($(".reviews_slider").length) {
+		var br_slider = $(".reviews_slider").slick({
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			arrows: true,
+			dots: false,
+			//autoplay: true,
+			// autoplaySpeed: 2000,
+			slide: ".card-review",
+			respondTo:'slider',
+			swipeToSlide: true,
+			touchThreshold: 25
+		});
 	}
 
 

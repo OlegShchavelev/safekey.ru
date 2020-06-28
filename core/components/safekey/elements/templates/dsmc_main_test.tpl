@@ -104,6 +104,7 @@
 
 
         {if $_modx->resource.section_advantages ?}
+
             {set $rows = json_decode($_modx->resource.section_advantages, true)}
 
             <section class="advantages_section">

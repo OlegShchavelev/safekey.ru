@@ -125,7 +125,7 @@ font-family: "ProximaNova";
   content: "\e906";
 }
 
-body {font-family: "ProximaNova", sans-serif;min-width:320px;/*background:url(../index.jpg) no-repeat center 0;*/-moz-transition:all 0.6s;-webkit-transition:all 0.6s;transition:all 0.6s;font-display: swap;}
+body {font-family: "ProximaNova", sans-serif;min-width:320px;/*background:url(../index.jpg) no-repeat center 0;*/ /*-moz-transition:all 0.6s;-webkit-transition:all 0.6s;transition:all 0.6s;*/font-display: swap;}
 
 .page_container {width:100%;box-sizing:border-box;position:relative;padding:0;margin:0 auto;opacity:1;overflow-x: hidden;}
 
@@ -962,7 +962,7 @@ body section .mse2_pagination ul li a {padding:0;margin:0;list-style:none;backgr
 .top_banner_section2 + .logos_section .inner_section {padding-top:0px;padding-bottom:0px;}
 .logos_slider2_wrap {background: #f6f9ff;padding-top:40px;padding-bottom:20px;width: 1120px;box-sizing:border-box;}
 .logos_slider2 {margin-bottom:0 !important;padding:0 !important;}
-.logos_slider2 .logos_slider_item_cell {margin-bottom:15px;}
+.logos_slider2 .logos_slider_item_cell {margin-bottom:15px;display: block;}
 .logos_slider2 .logos_slider_item_content {height: 63px;border-color:transparent;}
 .logos_slider2 .logos_slider_item_content:hover {    border-color:#95bcff;}
 .logos_slider2 .logos_slider_item {height:auto;padding:0;}
@@ -1027,5 +1027,158 @@ margin:-45px 0 0 -45px;z-index:10;}
 .service_top_block .the_form_item.the_form_item_submit input[type=submit], .the_form_item.the_form_item_submit button[type=submit] {height:42px;background:#f9ae1f;border-radius:24px;font-size: 17px;}
 .service_top_block .the_form_item.the_form_item_submit input[type=submit]:hover, .the_form_item.the_form_item_submit button[type=submit]:hover {background:#e99e0f;}
 .service_top_block .the_form_item {width:215px;margin-bottom:15px;}
+
+.title-transform-none h2 {
+    font-size: 32px;
+    text-transform: none;
+}
+
+.title-transform-none h2:before {
+    content: unset;
+}
+
+.list-group.blue {
+    list-style: none;
+}
+
+.list-group.blue li:after {
+    content: '';
+    display: block;
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    border: 2px solid #2574d5;
+    border-radius: 50%;
+    position: absolute;
+    left: -10px;
+    top: calc(50% - 14px);
+}
+
+.list-group li {
+    font-size: 15px !important;
+    font-weight: 600;
+
+}
+
+.list-group li span {
+    color: #2574d5;
+}
+
+.card-price {
+    background-color: #f4f4f4;
+    padding: 25px 50px;
+}
+
+.card-price .title {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.card-price .price {
+    font-size: 21px;
+    font-weight: 600;
+    text-align: right;
+    color: #1c76ce;
+}
+
+.border-bottom-dashed {
+    border-bottom: 2px dotted #d4d4d4;
+}
+
+.card-price .title:before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    display: block;
+    position: absolute;
+    background-color: #2574d5;
+    border-radius: 50%;
+    left: -40px;
+    top: calc(50% - 5px);
+}
+
+.card-review .image img {
+    border: 5px solid #f4f4f4;
+    border-radius: 3px;
+}
+
+.card-review .review-content .title {
+    font-size: 19px;
+    font-weight: 600;
+    padding-bottom: 25px;
+    position: relative;
+}
+
+.card-review .review-content .title:after {
+    content: "...";
+    color: #2574d5;
+    position: absolute;
+    left: 0;
+    top: 15px;
+}
+.service-reviews .review-all {
+    border-top: 1px solid #e6e6e6;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.service-reviews .review-all .label {
+    font-weight: 600;
+}
+
+.service-reviews .yandex-image {
+    width: 150px;
+    margin: 10px 0;
+}
+
+@media screen and (max-width: 576px) {
+    .card-price .price {
+     text-align: left;
+    }
+    .title.border-bottom-dashed {
+     border-bottom: none;
+    }
+    .card-review .image {
+     display:flex;
+     justify-content: center;
+    }
+
+    .service-reviews .slick-slider .slick-prev {
+        top: 20%;
+        left: 0 !important;
+    }
+
+    .service-reviews .slick-slider .slick-next {
+        top: 20%;
+        right: 0 !important;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .card-review .image {
+        display:flex;
+        justify-content: center;
+    }
+
+    .service-reviews .slick-slider .slick-prev {
+        top: 20%;
+        left: 0 !important;
+    }
+
+    .service-reviews .slick-slider .slick-next {
+        top: 20%;
+        right: 0 !important;
+    }
+
+    .service-reviews .review-all {
+        text-align: center;
+    }
+
+    .service-reviews .yandex-image {
+        width: 150px;
+        margin: 20px auto;
+    }
+
+}
 
 

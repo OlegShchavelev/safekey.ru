@@ -13,6 +13,7 @@
         assets/template/css/jquery.nouislider.min.css,
         assets/template/css/jquery.selectbox-mobile.css,
         assets/template/css/style.css?ver=1.01,
+        assets/template/css/bootstrap-grid.min.css,
         assets/template/css/adaptive.css?ver=1.01,
         assets/template/css/custom.css,
         assets/template/css/notiflix-2.1.3.css
@@ -70,6 +71,7 @@
     <link rel="stylesheet" href="/assets/template/css/ie.css"/>
     <!--[endif]-->
 
+    <link rel="stylesheet" href="assets/template/css/bootstrap-grid.min.css">
     {$_modx->getPlaceholder('MinifyX.css')}
     {'!ga_head' | snippet}
     {'!jivo' | snippet}

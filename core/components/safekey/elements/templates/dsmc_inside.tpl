@@ -6,8 +6,10 @@
 <body>
 
 <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WMQXV5F"
-                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WMQXV5F"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
 <!-- End Google Tag Manager (noscript) -->
 
 
@@ -37,6 +39,16 @@
                     {include 'section_top_hobnail'}
 
                     {include 'content_portfolio_mark2'}
+
+                    {if $_modx->user.id > 0}
+
+                        {set $rows = json_decode($_modx->resource.section_price, true)}
+
+                        {include 'section_price'}
+                        {include 'section_navigations'}
+                        {include 'section_reviews'}
+
+                    {/if}
 
                     {$_modx->resource.content}
 
