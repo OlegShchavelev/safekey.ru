@@ -39,19 +39,6 @@ $(document).ready(function() {
 		}
 	}
 	
-	//services menu transformation
-	if (($(window).width() >= 1200) && ($('.header_menu>ul>li').length >=3)) {
-	   var h_m_el = $('.header_menu>ul>li');
-	   $('.header_menu_block').addClass('has_right_dropdown');
-	   
-	   $('<div class="right_dropdown_wrap"><button class="dropdown_more">Еще услуги</button><ul class="right_dropdown"></ul></div>').appendTo('.header_menu');
-	   
-	   for (var i=4;i<h_m_el.length;i++) {
-	       $(h_m_el[i]).appendTo($('.right_dropdown'));
-	   }
-	}
-	//--
-	
 	//a.reveal_text
 	$('a.reveal_text').click(function(e) {
 	    e.preventDefault();
@@ -189,7 +176,8 @@ $(document).ready(function() {
 			    respondTo:'slider',
 			    swipeToSlide: true,
 			    variableWidth: true,
-			    touchThreshold: 25			    
+			    touchThreshold: 25,
+			    lazyLoad: 'ondemand',
 			  });
 	}
 
@@ -331,12 +319,14 @@ $(document).ready(function() {
 	//-
 
 	
-	//mark has_ul 
+	//mark has_ul
+	/*
 	$('.header_menu ul > li').add('.header_top_menu ul > li').each(function() {
 		if ($(this).children('ul').length) {$(this).addClass('has_ul');}
 		if ($(this).children('.header_top_menu_dropdown').length) {$(this).addClass('has_dropdown');}
 		if ($(this).children('.header_menu_dropdown').length) {$(this).addClass('has_dropdown');}
 	});
+	*/
 	//--
 	
 	//equal height of elements
@@ -501,8 +491,8 @@ $(document).ready(function() {
 	
 	
 	if ($('.roll_over_menu').length) {
-	  
-	  
+
+
 	  $('.header_menu_mobile_sub_categories_ul').each(function() {
 	    $(this).prepend('<li class="go_back_li"><a href="#"><span>Вернуться назад</span></a><span class="x_close"></span></li>');
 	  });
@@ -512,15 +502,17 @@ $(document).ready(function() {
 	      e.preventDefault();
 	      var this_li = $(this);
 	      $('.roll_over_menu > .ul_sub_wrap[data-toggle="'+ $(this_li).data('toggle') +'"]').addClass('open');
-	      $(this).closest('ul.header_menu_mobile_main_categories_ul').addClass('open');	  
-	      
+	      $(this).closest('ul.header_menu_mobile_main_categories_ul').addClass('open');
+		  $(this).siblings('.ul_sub_wrap').addClass('open');
 	      scrollToTop();
 	    }
 	  });
-	  
-	  $('.roll_over_menu > .ul_sub_wrap > .header_menu_mobile_sub_categories_ul > li > a').click(function(e) {
+
+	  $('.roll_over_menu > .header_menu_mobile_sub_categories_ul > li > a').click(function(e) {
+	  	console.log('Клац');
 	    if ($(this).siblings('.ul_sub_wrap').find('ul').length) {e.preventDefault();}
 	    if ($(this).closest('li').hasClass('go_back_li') == false) {
+			e.preventDefault();
 	      $(this).closest('.ul_sub_wrap').addClass('second_sub_open');
 	      $(this).siblings('.ul_sub_wrap').addClass('open');
 	    }
@@ -537,7 +529,7 @@ $(document).ready(function() {
 	  $('.roll_over_menu > .ul_sub_wrap > .header_menu_mobile_sub_categories_ul > li.go_back_li > a').click(function(e) {
 	    e.preventDefault();
 	    var this_ul = $(this).closest('ul');
-	    $('.roll_over_menu > .ul_sub_wrap').removeClass('open');
+	    $('.roll_over_menu .ul_sub_wrap').removeClass('open');
 	    $('ul.header_menu_mobile_main_categories_ul').removeClass('open');
 	  });
 	  
@@ -603,8 +595,6 @@ $(document).ready(function() {
 	    //$('.header_menu_block').scrollLeft(bcrumb_w+60);
 	    
 	  },444);
-
-	
 	}
 	//--
 	 

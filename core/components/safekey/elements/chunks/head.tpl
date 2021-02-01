@@ -39,6 +39,8 @@
 ]
 }
 
+
+
 {set $tv_template_description = 17 | resource: 'template_description'}
 {set $val_parrent = $_modx->resource.parent}
 
@@ -70,7 +72,7 @@
     <!--[if lt IE 11]>
     <link rel="stylesheet" href="/assets/template/css/ie.css"/>
     <!--[endif]-->
-
+    <link href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/template/css/bootstrap-grid.min.css">
     {$_modx->getPlaceholder('MinifyX.css')}
     {'!ga_head' | snippet}

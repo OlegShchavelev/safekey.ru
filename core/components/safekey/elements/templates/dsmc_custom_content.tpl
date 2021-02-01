@@ -18,7 +18,7 @@
     {include 'header'}
     <div class="header_placeholder"></div>
 
-    <section class="main">
+    <section class="main" itemscope itemtype="http://schema.org/WebPage">
 
         <section class="the_content_section">
             <div class="inner_section clearfix">
@@ -35,7 +35,7 @@
                     <br/>
 
                 </div>
-
+</span>
 
                 <div class="the_content_section_right">
 

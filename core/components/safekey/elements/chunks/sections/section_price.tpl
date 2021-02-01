@@ -1,5 +1,8 @@
+{set $rows = json_decode($_modx->resource.section_price, true)}
+
+{if $_modx->resource.section_price ?}
 <section class="service-price title-transform-none my-5">
-    <h2>Цена на услуги</h2>
+    <h2>Цены вскрытия разных замков сейфов</h2>
     <div class="card-price">
         <div class="row">
 
@@ -17,3 +20,4 @@
         </div>
     </div>
 </section>
+{/if}

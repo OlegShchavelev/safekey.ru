@@ -40,16 +40,6 @@
 
                     {include 'content_portfolio_mark2'}
 
-                    {if $_modx->user.id > 0}
-
-                        {set $rows = json_decode($_modx->resource.section_price, true)}
-
-                        {include 'section_price'}
-                        {include 'section_navigations'}
-                        {include 'section_reviews'}
-
-                    {/if}
-
                     {$_modx->resource.content}
 
 
@@ -57,11 +47,11 @@
 
                     {*
 
+                    {include 'section_price_2'}
                     {include 'how_we_work_block'}
 
-
-
                     {$_modx->resource.section_bottom_lead}
+
 
                     <br/>
 
