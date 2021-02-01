@@ -1106,12 +1106,17 @@ $(document).ready(function() {
 		$(this).addClass('active');
 	});
 	//-
-	
-	
-	
 
 
-	
+	//Anchor
+
+	$('a[data-link="anchor"]').click(function(){
+		let anchor = $(this).attr('href');
+		$('html, body').animate({
+			scrollTop:  $(anchor).offset().top
+		}, 600);
+	});
+
 	//forms
 	$(".frm1").validate({  //проверка форм
 				

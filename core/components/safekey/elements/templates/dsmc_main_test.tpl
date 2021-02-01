@@ -41,9 +41,10 @@
                                         <div class="img-banner-text pt-4 mb-5">
                                             {'tv_main_banner_intro' | dsmc_tv}
                                         </div>
-                                        {if 'tv_main_banner_link' | dsmc_tv ?}
+                                        {if 'tv_main_banner_link' | dsmc_tv != '' || 'tv_main_banner_anchor' | dsmc_tv}
                                             <div class="img-banner-text my-5">
-                                                <a href="{'tv_main_banner_link' | dsmc_tv | url}"
+                                                <a href="{'tv_main_banner_anchor' | dsmc_tv ? '#' ~ ('tv_main_banner_anchor' | dsmc_tv) : 'tv_main_banner_link' | dsmc_tv | url}"
+                                                   {if 'tv_main_banner_anchor' | dsmc_tv ?}data-link="anchor"{/if}
                                                    class="button mini_button button-info"
                                                    tabindex="0">Подробнее</a>
                                             </div>
@@ -133,40 +134,6 @@
                     </div>
                 </div>
                 {/foreach}
-                {*
-                <div class="col-md-4">
-                    <div class="card card-bg-gradient-success card-hidden card-banner card-bg-pos-2 card-radius-10 mr-0 mr-md-2 mb-3 mb-md-0">
-                        <div class="card-img-bg">
-                            <img src="images/1/safekey_banner_2_1998.png">
-                        </div>
-                        <div class="card-body">
-                            <div class="card-title">
-                                Единственный <br> в России
-                            </div>
-                            <div class="card-text">
-                                мультибрендовый <br>
-                                центр обслуживания <br>
-                                сейфов <br>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="card card-hidden card-banner card-radius-10 mb-3 mb-md-0" style="background: url(images/1/septikspb_banner_key.jpg);">
-                        <div class="card-img-bg"></div>
-                        <div class="card-body">
-                            <div class="card-title">
-                                Музей замков <br> и ключей
-                            </div>
-                            <div class="card-text">
-                                уникальная коллекция <br>
-                                запорных механизмов
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                *}
             </div>
         </div>
     </section>
@@ -289,7 +256,7 @@
     </section><!--/how_we_work_section-->
 
     {if $_modx->resource.section_popular_migx ?}
-        <section class="popular_section">
+        <section class="popular_section" id="popular_section">
             <div class="inner_section clearfix">
 
                 <h2>{$_modx->resource.section_popular_title}</h2>
