@@ -51,6 +51,10 @@ label.error {
     border-color: #d44 !important;
 }
 
+.is-invalid + .checkbox1_label svg {
+    stroke: #d44 !important;
+}
+
 @-webkit-keyframes autofill {
     to {
         color: inherit;
@@ -5339,3 +5343,5 @@ body section .mse2_pagination ul li a {
 .card.card-bg-gradient-success {
     background: linear-gradient(104.67deg, #149354 3.42%, #149365 100%);
 }
+
+
