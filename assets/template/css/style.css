@@ -5344,4 +5344,183 @@ body section .mse2_pagination ul li a {
     background: linear-gradient(104.67deg, #149354 3.42%, #149365 100%);
 }
 
+/* ------------------------
+Аккордион
+ */
+
+.faq_block {
+    clear: both;
+    position: relative;
+}
+
+.faq_item {
+    margin-bottom: 5px;
+}
+
+.faq_item_head {
+    transition: all 0.4s;
+    border-radius: 8px;
+    position: relative;
+    border: 1px solid;
+    border-color: #E9EDF3;
+}
+
+.faq_item_head .title {
+    font-size: 16px;
+    color: #000000;
+    transition: all 0.4s;
+    text-decoration: none;
+    padding: 10px 45px 10px 23px;
+    line-height: 26px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+}
+
+.faq_item.active .faq_item_head .title {
+    color: #000;
+    font-weight: bold;
+}
+
+.faq_item_head .title span {
+}
+
+.faq_item_head .close {
+    width: 24px;
+    height: 24px;
+    border: 1px solid;
+    border-color: #E9EDF3;
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    right: 10px;
+    box-sizing: border-box;
+    background: no-repeat center center;
+    transition: all 0.4s;
+    background-image: url("data:image/svg+xml,%3Csvg width='10' height='7' viewBox='0 0 10 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L5 5L9 1' stroke='%230074D1' stroke-width='2'/%3E%3C/svg%3E ");
+}
+
+.faq_item.active .faq_item_head .close {
+    background-image: url("data:image/svg+xml,%3Csvg width='10' height='7' viewBox='0 0 10 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 6L5 2L9 6' stroke='white' stroke-width='2'/%3E%3C/svg%3E%0A");
+    border-color: #0074D1;
+    background-color: #0074D1;
+}
+
+.faq_item_head .close:hover {
+    cursor: pointer;
+}
+
+.faq_item_content {
+    font-size: 14px;
+    color: #000000;
+    margin-top: -4px;
+    padding: 23px 32px 10px 24px;
+    box-sizing: border-box;
+    border: 1px solid;
+    border-top: none;
+    border-color: #E9EDF3;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.faq_item_content p {
+    font-size: 14px;
+    color: #000000;
+    padding: 0 0 18px 0;
+    display: block;
+    line-height: 1.5em;
+}
+
+/* ------------------------
+    Форма
+*/
+
+.card {
+
+}
+.card.card-bg-light {
+    background-color: #F6F9FF;
+}
+
+.card.card-form .card-title h3 {
+    color:#000;
+    font-size: 22px;
+}
+
+.card.card-form .card-description {
+    font-size: 13px;
+    color: #888888;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+.card.card-form .text-center {
+    text-align: center;
+}
+
+.card.card-form .form-control {
+    width: 100%;
+    border: none;
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    font-size: 13px;
+    color: #939393;
+    border: 1px solid;
+    border-radius: 5px;
+    border-color: transparent;
+    transition: border-color .3s ease-in-out;
+}
+
+.card.card-form .form-control.is-invalid {
+    border-color: #d44;
+}
+
+.card.card-form .form-control:focus,
+.card.card-form .form-control:focus-visible {
+    border-color: transparent;
+    outline: none;
+}
+
+.card.card-form .btn {
+    padding: 15px 15px;
+    border: none;
+    border-radius: 90px;
+    width: 100%;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.card.card-form .form-group {
+    margin: 20px 0;
+}
+
+.card.card-form .form-group span {
+    font-size: 11px;
+}
+
+.card.card-form .form-group span a {
+    color: #0074D1;
+}
+
+.card.card-form .form-group span a:hover {
+    text-decoration: none;
+}
+
+.card.card-form .btn.btn-orange {
+    background-color: #FFAD37;
+    color: #fff;
+}
+
+.card.card-form .card-icon {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.svg-question {
+    width: 96px;
+    height: 96px;
+}
+
 

@@ -1086,14 +1086,7 @@ $(document).ready(function() {
 		
 	}
 	//--
-	
-	
 
-	
-	
-	
-	
-	
 	//the tabs
 	$('.the_tabs_item').not('.the_tabs_item.active').slideUp(0);
 	
@@ -1105,6 +1098,20 @@ $(document).ready(function() {
 		$('.the_tabs_head a').removeClass('active');
 		$(this).addClass('active');
 	});
+
+	//faq items mechanics
+	$('.faq_item_content').not('.faq_item.active .faq_item_content').slideUp(0);
+
+	$('.faq_item_head a').click(function(e) {
+		e.preventDefault();
+		$(this).closest('.faq_block').find('.faq_item').not($(this).closest('.faq_item')).removeClass('active');
+		$(this).closest('.faq_block').find('.faq_item').not($(this).closest('.faq_item')).find('.faq_item_content').slideUp();
+
+		$(this).closest('.faq_item').toggleClass('active');
+		$(this).closest('.faq_item').find('.faq_item_content').slideToggle();
+	});
+	//--
+
 	//-
 
 
