@@ -160,7 +160,7 @@
         <!--/advantages_section-->
     {/if}
 
-    {if $_modx->user.id > 0}
+  
         {if 'section_faq_title' | dsmc_tv or 'section_faq_migx' | dsmc_tv}
         <section class="py-5">
             <div class="container">
@@ -200,7 +200,7 @@
             </div>
         </section>
             {/if}
-    {/if}
+
 
 
     {if $_modx->resource.section_middle_banner_title or $_modx->resource.section_middle_banner_сontent ?}
