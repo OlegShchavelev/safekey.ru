@@ -5523,4 +5523,136 @@ body section .mse2_pagination ul li a {
     height: 96px;
 }
 
+/* * =================================================== * Back to top * =================================================== */
+.back-to-top {
+    background: #ffad1d;
+    color: #fff;
+    display: flex;
+    border-radius: 50%;
+    width: 2.71428571rem;
+    height: 2.71428571rem;
+    justify-content: center;
+    align-items: center;
+}
+.back-to-top.on-up {
+    transition: all 0.25s ease;
+    position: fixed;
+    z-index: 1000 !important;
+    bottom: 25px;
+    right: -100px;
+    cursor: pointer;
+}
 
+.back-to-top.on-up a {
+    text-decoration: none;
+}
+
+.back-to-top.on-up.active {
+    right: 15px;
+}
+.back-to-top.on-up.active:hover {
+    right: 15px;
+    bottom: 30px;
+}
+
+.share-button {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    filter: url(#goo);
+    z-index: 1000 !important;
+}
+.share-button.on-up {
+    transition: all 0.25s ease;
+    position: fixed;
+    z-index: 15;
+    bottom: 95px;
+    right: -150px;
+    cursor: pointer;
+}
+.share-button.on-up.active {
+    right: 15px;
+}
+.share-button.on-up.active:not(.open):hover {
+    right: 15px;
+    bottom: 100px;
+}
+.share-button .item {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    border-radius: 50%;
+    width: 2.71428571rem;
+    height: 2.71428571rem;
+    font-size: 1.75rem;
+    background-color: #ffad1d;
+    color: #fff;
+    transition: all 400ms ease-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.share-button .item:nth-child(1) {
+    transition-delay: 0ms;
+    background-color: #43d854;
+}
+.share-button .item:nth-child(2) {
+    transition-delay: 150ms;
+    background-color: #bc27ab;
+}
+.share-button .item:nth-child(3) {
+    transition-delay: 300ms;
+    background-color: #2787F5;
+    font-size: 1.25rem;
+}
+.share-button .open_share {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    -webkit-transition: all 700ms ease-out;
+    transition: all 700ms ease-out;
+    font-size: 1.25rem;
+}
+.open .open_share {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+    -webkit-transition: all 700ms ease-out;
+    transition: all 700ms ease-out;
+}
+.open .item:nth-child(1) {
+    -webkit-transform: translate(-55px, -25px);
+    transform: translate(-55px, -25px);
+}
+.open .item:not(:last-child):hover {
+    opacity: 0.9;
+    text-decoration: none;
+}
+.open .item:nth-child(2) {
+    -webkit-transform: translate(-60px, 40px);
+    transform: translate(0, -60px);
+    transition-delay: 150ms;
+    background-color: 0;
+}
+.open .item:nth-child(3) {
+    -webkit-transform: translate(-60px, 40px);
+    transform: translate(-60px, 40px);
+    transition-delay: 300ms;
+}
+#jvlabelWrap {
+    bottom: -40px !important;
+}
+body .__jivoMobileButton {
+    display: none !important;
+}
+.share-block-absolute {
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+}

@@ -1959,3 +1959,49 @@ $(document).ready(function() {
 	  });
 	 
 });
+
+// =====================================================
+//    Button up
+// =====================================================
+
+$(window).scroll(function () {
+	if ($(this).scrollTop() > $(this).height()) {
+		$(".on-up").addClass("active");
+	} else {
+		$(".on-up").removeClass("active");
+	}
+});
+
+$(".back-to-top.on-up").click(function () {
+	$("html, body").stop().animate({scrollTop: 0}, "slow", "swing");
+});
+
+// =====================================================
+//    Social buttons
+// =====================================================
+
+var share = document.querySelector('.share-button');
+var isOpened = false;
+document.querySelector('.open_share').addEventListener('click', function () {
+	if (!isOpened) {
+		share.classList.add('open');
+		isOpened = true;
+	} else {
+		share.classList.remove('open');
+		isOpened = false;
+	}
+});
+
+var is_safari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+
+if (is_safari) {
+	$('feGaussianBlur').attr('stdDeviation', 0);
+}
+
+$('.dropdown-slide-right, .btn-mvtform-mobile').click(function (e) {
+	e.preventDefault();
+	$(this).closest('.dropdown-slide').addClass('show');
+});
+$('.nav-toggler-back').click(function (e) {
+	$(this).closest('.dropdown-slide').removeClass('show');
+});
