@@ -3,7 +3,8 @@
 {if $_modx->resource.id == 8 }
     <script type="text/javascript" src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
 {/if}
-
+<script src="{'assets_url' | option}components/safekey/dist/vendor/maska/maska.js"></script>
+<script src="{'assets_url' | option}components/safekey/dist/js/theme.js"></script>
 
 <script>
     // ------------------------------------------------------- //

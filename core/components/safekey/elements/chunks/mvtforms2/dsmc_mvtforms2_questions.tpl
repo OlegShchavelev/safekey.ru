@@ -17,7 +17,7 @@
             <input type="hidden" name="form" value="{$formID}">
 
             <input class="form-control" name="{$formID}_name" placeholder="Ваше имя">
-            <input class="form-control mvtFormPhone" name="{$formID}_phone" placeholder="Номер телефона">
+            <input class="form-control masked" name="{$formID}_phone" data-mask="+# ### ### ## ##" placeholder="+7 812 956 65 66">
 
             <div class="form-group">
                 <input type="checkbox" id="{$formID}_accept" name="{$formID}_accept" checked style="display:none;">
