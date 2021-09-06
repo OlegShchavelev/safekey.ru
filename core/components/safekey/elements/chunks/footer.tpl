@@ -29,7 +29,7 @@
 
         <div class="footer_column footer_column_contacts clearfix">
             <div class="footer_logo">
-                <a href="#"><img src="{$_modx->config.assets_url}/template/img/logo.png" class="lazy" alt="" /><span itemprop="name"><b><i>Сейф</i>Кей</b></span></a>
+                <a href="/"><img src="{$_modx->config.assets_url}/template/img/logo.png" class="lazy" alt="Safekey" /><span itemprop="name"><b><i>СейфКей</i></b></span></a>
             </div>
 
             <p class="copy">© {'year' | snippet} Safekey.ru, {$_modx->config.copy}</p>
