@@ -63,7 +63,13 @@
             {/if}
         {/foreach}
     {/if}
-
+    
+    <meta property="og:title" content="{if $_modx->resource.seo_title != ''}{$_modx->resource.seo_title}{else}{$_modx->resource.pagetitle}{/if}"/>
+    <meta property="og:description" content="{$_modx->resource.seo_description}"/>
+    <meta property="og:image" content="/img/og_img.png"/>
+    <meta property="og:url" content= "{'id' | resource | url : ['scheme' => 'full']}">
+    <meta property="og:type" content="website"/>
+    
     <meta name="viewport" content="width=device-width">
     <meta name="yandex-verification" content="68f631b35e7e101f" />
     <meta name="yandex-verification" content="43d9811cc47d735f" />
