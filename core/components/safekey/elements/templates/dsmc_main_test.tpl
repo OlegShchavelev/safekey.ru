@@ -160,6 +160,11 @@
         <!--/advantages_section-->
     {/if}
 
+        {if $_modx->user.id > 0}
+            {'!PageBlocks' | snippet : [
+            'cid' => 1,
+            ]}
+        {/if}
   
         {if 'section_faq_title' | dsmc_tv or 'section_faq_migx' | dsmc_tv}
         <section class="py-5">
@@ -169,7 +174,6 @@
                 {/if}
 
                 {set $faq = 'section_faq_migx' | dsmc_tv | fromJSON}
-
 
                 <div class="row">
                     <div class="col-lg-8">

@@ -41,8 +41,15 @@
                     {include 'content_portfolio_mark2'}
 
                     {$_modx->resource.content}
+
+                    {if $_modx->user.id > 0}
+                        {'!PageBlocks' | snippet : [
+                        'cid' => 1,
+                        'up' => 1,
+                        ]}
+                    {/if}
                     
-                      {if 'section_faq_title' | dsmc_tv or 'section_faq_migx' | dsmc_tv}
+                    {if 'section_faq_title' | dsmc_tv or 'section_faq_migx' | dsmc_tv}
                         <section class="py-5">
                             <div class="container">
                                 {if 'section_faq_title' | dsmc_tv ?}
