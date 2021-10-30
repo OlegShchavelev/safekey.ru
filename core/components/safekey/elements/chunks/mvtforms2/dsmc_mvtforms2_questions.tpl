@@ -29,7 +29,7 @@
                     <!--noindex--><span>Я согласен с <a href="{'114' | url}">политикой конфиденциальности</a></span><!--/noindex-->
                 </label>
             </div>
-
+            
             <div class="form-group">
                 <button type="submit" class="btn btn-orange" id="{$formID}_form_submit">Отправить</button>
             </div>

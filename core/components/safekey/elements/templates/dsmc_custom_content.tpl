@@ -33,44 +33,11 @@
                     {$_modx->resource.content}
 
                     <br/>
-                    
-                      {if 'section_faq_title' | dsmc_tv or 'section_faq_migx' | dsmc_tv}
-                        <section class="py-5">
-                            <div class="container">
-                                {if 'section_faq_title' | dsmc_tv ?}
-                                    <h2>{'section_faq_title' | dsmc_tv}</h2>
-                                {/if}
-                
-                                {set $faq = 'section_faq_migx' | dsmc_tv | fromJSON}
-                
-                                  <div class="row">
-                                    <div class="col-lg-6">
-                                        <div class="faq_block">
-                                            {foreach $faq as $row}
-                                            <div class="faq_item">
-                                                <div class="faq_item_head">
-                                                    <a href="#" class="title">
-                                                        <span>{$row.name}</span>
-                                                        <i class="close"></i>
-                                                    </a>
-                                                </div>
-                
-                                                <div class="faq_item_content" style="display: none;">
-                                                    {$row.answer}
-                                                </div>
-                                            </div>
-                                            {/foreach}
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6 mt-4 mt-lg-0">
-                                        {'!mvtForms2' | snippet : [
-                                        'form' => 'questions'
-                                        ]}
-                                    </div>
-                                </div>
-                              </div>
-                        </section>
-                      {/if} 
+
+                      
+            {'!PageBlocks' | snippet : [
+            'cid' => 1,
+            ]}
 
                 </div>
 </span>
