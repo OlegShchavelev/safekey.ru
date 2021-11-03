@@ -83,4 +83,5 @@
     {$_modx->getPlaceholder('MinifyX.css')}
     {'!ga_head' | snippet}
     {'!jivo' | snippet}
+    <link rel="stylesheet" href="{'assets_url' | option}components/safekey/dist/css/theme.bs.slim.default.min.css">
 </head>
