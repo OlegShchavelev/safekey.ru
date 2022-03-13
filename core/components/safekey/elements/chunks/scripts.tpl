@@ -27,6 +27,8 @@
     // inject local SVG sprite (using only 'icons/orion-svg-sprite.svg' path)
     // while using file:// protocol
     // pls don't forget to change to your domain :)
+
+    injectSvgSprite('{'assets_url' | option}components/safekey/dist/icons/safekey-svg-sprite.svg')
     injectSvgSprite('{'assets_url' | option}template/icons/dsms-svg-sprite.svg')
 </script>
 

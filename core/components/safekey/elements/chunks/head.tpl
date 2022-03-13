@@ -74,6 +74,8 @@
     <meta name="yandex-verification" content="68f631b35e7e101f" />
     <meta name="yandex-verification" content="43d9811cc47d735f" />
     <link href="favicon.png" rel="shortcut icon" type="image/x-icon" />
+    
+    <link rel="canonical" href="{'id' | resource | url : ['scheme' => 'full']}" />
 
     <!--[if lt IE 11]>
     <link rel="stylesheet" href="/assets/template/css/ie.css"/>
