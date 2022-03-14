@@ -38,6 +38,16 @@
                             <!--noindex--><span>Я согласен с <a href="/policy">политикой конфиденциальности</a></span><!--/noindex-->
                         </label>
                     </div>
+                    <div class="form-success form-success-muted d-none">
+                        <div class="form-success-icon">
+                            <img src="img/icon-success-safe.png" alt="Заявка отправлена">
+                        </div>
+                        <div class="form-success-body">
+                            <div class="form-success-title">Спасибо!</div>
+                            <div class="form-success-text">Наш менеджер скоро <br> свяжется с вами</div>
+                            <a href="{'base_url' | option}" class="form-success-btn">На главную</a>
+                        </div>
+                    </div>
                 </form>
             </div>
         </div><!--/horizontal_form_block-->

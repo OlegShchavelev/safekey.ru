@@ -3,6 +3,7 @@ $(document).ready(function ($) {
     mvtForms2.callbacks.success = function(response) {
         Notiflix.Notify.Success(response.data.answer);
         $('#' + response.form + '_form').trigger('reset');
+        $('#' + response.form + '_form .form-success').removeClass('d-none');
     };
 
     mvtForms2.callbacks.error = function(response) {

@@ -35,6 +35,16 @@
             <div class="the_form_item the_form_item_submit">
                 <button id="horizontal_form_form_submit" id="{$formID}_form_submit" type="submit">Отправить</button>
             </div>
+            <div class="form-success form-success-column d-none">
+                <div class="form-success-icon">
+                    <img src="img/icon-success-safe.png" alt="Заявка отправлена">
+                </div>
+                <div class="form-success-body">
+                    <div class="form-success-title">Спасибо!</div>
+                    <div class="form-success-text">Наш менеджер скоро <br> свяжется с вами</div>
+                    <a href="{'base_url' | option}" class="form-success-btn">На главную</a>
+                </div>
+            </div>
         </form>
     </div>
 </div><!--/service_top_block_form_wrap-->

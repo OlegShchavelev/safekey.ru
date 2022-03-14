@@ -1,0 +1,79 @@
+.the_form {
+  position: relative;
+}
+
+.form-success {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .form-success-icon {
+    margin-right: 40px;
+    .svg-icon,
+    .img-success-icon {
+      width: 103px;
+      height: 87px;
+    }
+  }
+  .form-success-title {
+    font-family: "ProximaNova",sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 16px;
+  }
+  .form-success-text {
+    font-size: 16px;
+    margin-bottom: 16px;
+  }
+  .form-success-btn {
+    display: inline-block;
+    background-color: #0074D1;
+    padding: 15px 40px;
+    font-size: 13px;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    &:hover {
+      background-color: rgba(0, 115, 209, 0.9);
+    }
+  }
+  &.form-success-column {
+    flex-direction: column;
+    .form-success-icon {
+      margin-right: 0;
+      margin-bottom: 40px;
+    }
+    .form-success-body {
+      text-align: center;
+    }
+  }
+  &.form-success-light {
+    background: #f6faff;
+  }
+  &.form-success-muted {
+    background: #e4ebf6;
+  }
+  &.form-success-blue {
+    background: #2069cf;
+    .form-success-btn {
+      background: #ffa21b;
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .form-success {
+    flex-direction: column;
+    .form-success-icon {
+      margin-bottom: 2rem;
+      margin-right: 0;
+    }
+  }
+}
